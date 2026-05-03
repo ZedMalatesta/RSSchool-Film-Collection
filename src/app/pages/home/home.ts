@@ -10,7 +10,7 @@ import { FilmsService } from '../../services/films.service';
   styleUrl: './home.css',
 })
 export class Home {
-  private readonly filmsService = inject(FilmsService);
+  readonly filmsService = inject(FilmsService);
 
   readonly query = signal('');
 

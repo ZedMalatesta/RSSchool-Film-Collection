@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Film } from '../../models/film.model';
 
 @Component({
@@ -8,4 +8,5 @@ import { Film } from '../../models/film.model';
 })
 export class FilmCard {
   film = input.required<Film>();
+  toggleFavorite = output<number>();
 }

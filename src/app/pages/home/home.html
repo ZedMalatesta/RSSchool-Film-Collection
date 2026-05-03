@@ -10,7 +10,7 @@
 @if (films().length) {
   <div class="catalog">
     @for (film of films(); track film.id) {
-      <app-film-card [film]="film" />
+      <app-film-card [film]="film" (toggleFavorite)="filmsService.toggleFavorite($event)" />
     }
   </div>
 } @else {

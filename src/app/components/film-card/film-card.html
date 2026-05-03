@@ -7,6 +7,14 @@
       <span class="dot">&middot;</span>
       <span>{{ film().genre }}</span>
     </div>
-    <div class="rating">&#9733; {{ film().rating }}</div>
+    <div class="footer">
+      <div class="rating">&#9733; {{ film().rating }}</div>
+      <button
+        class="fav"
+        [class.active]="film().isFavorite"
+        (click)="toggleFavorite.emit(film().id)"
+        [title]="film().isFavorite ? 'Remove from favorites' : 'Add to favorites'"
+      >{{ film().isFavorite ? '♥' : '♡' }}</button>
+    </div>
   </div>
 </article>
