@@ -1,4 +1,4 @@
-<article class="card">
+<article class="card" [routerLink]="['/films', film().id]">
   <img [src]="film().posterUrl" [alt]="film().title" class="poster" />
   <div class="info">
     <h3 class="title">{{ film().title }}</h3>
@@ -12,7 +12,7 @@
       <button
         class="fav"
         [class.active]="film().isFavorite"
-        (click)="toggleFavorite.emit(film().id)"
+        (click)="$event.stopPropagation(); toggleFavorite.emit(film().id)"
         [title]="film().isFavorite ? 'Remove from favorites' : 'Add to favorites'"
       >{{ film().isFavorite ? '♥' : '♡' }}</button>
     </div>

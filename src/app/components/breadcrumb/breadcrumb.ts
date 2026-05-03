@@ -27,10 +27,16 @@ export class Breadcrumb {
     for (const child of route.children) {
       const segment = child.snapshot.url.map(s => s.path).join('/');
       const nextUrl = segment ? `${url}/${segment}` : url || '/';
-      const label = child.snapshot.data['breadcrumb'];
+      const label = this.getLabel(child);
       if (label) crumbs.push({ label, url: nextUrl });
       this.build(child, nextUrl, crumbs);
     }
     return crumbs;
+  }
+
+  private getLabel(route: ActivatedRoute): string | undefined {
+    const config = route.snapshot.routeConfig;
+    if (config?.resolve?.['breadcrumb']) return route.snapshot.data['breadcrumb'];
+    return config?.data?.['breadcrumb'];
   }
 }
