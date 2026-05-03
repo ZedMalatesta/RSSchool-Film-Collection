@@ -8,4 +8,6 @@ import { Breadcrumb } from './components/breadcrumb/breadcrumb';
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
-export class App {}
+export class App {
+  readonly year = new Date().getFullYear();
+}

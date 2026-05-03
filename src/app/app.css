@@ -37,3 +37,25 @@ main {
   margin: 2rem auto;
   padding: 0 1.5rem;
 }
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid #e0e6ed;
+  background: #f8f9fa;
+  font-size: 0.875rem;
+  color: #7f8c8d;
+}
+
+footer a {
+  color: #FFA500;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
