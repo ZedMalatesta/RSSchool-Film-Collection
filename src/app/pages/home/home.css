@@ -1,5 +1,31 @@
+.search {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 2px solid #FFA500;
+  border-radius: 8px;
+  outline: none;
+  transform: rotate(-0.4deg);
+  box-shadow: 3px 3px 0 #FFA500;
+  transition: box-shadow 0.15s;
+}
+
+.search:focus {
+  box-shadow: 5px 5px 0 #FFA500;
+}
+
 .catalog {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1.5rem;
+}
+
+.empty {
+  text-align: center;
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin-top: 3rem;
 }

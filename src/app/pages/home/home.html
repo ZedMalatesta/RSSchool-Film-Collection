@@ -1,5 +1,18 @@
-<div class="catalog">
-  @for (film of films; track film.id) {
-    <app-film-card [film]="film" />
-  }
-</div>
+<input
+  class="search"
+  type="text"
+  placeholder="what do you want to watch?"
+  appAutofocus
+  [value]="query()"
+  (input)="query.set($any($event.target).value)"
+/>
+
+@if (films().length) {
+  <div class="catalog">
+    @for (film of films(); track film.id) {
+      <app-film-card [film]="film" />
+    }
+  </div>
+} @else {
+  <p class="empty">Nothing found...</p>
+}
