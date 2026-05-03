@@ -4,12 +4,15 @@ header {
   justify-content: space-between;
   padding: 0 1.5rem;
   height: 56px;
-  border-bottom: 1px solid #e0e0e0;
+  background: linear-gradient(135deg, #FFB13D 0%, #FFA500 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.1rem;
+  letter-spacing: -0.3px;
 }
 
 nav {
@@ -19,10 +22,18 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #555;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
-nav a.active {
-  color: #000;
-  font-weight: 600;
+nav a.active,
+nav a:hover {
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
 }
