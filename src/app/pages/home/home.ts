@@ -1,7 +1,7 @@
-import { Component, signal, computed } from '@angular/core';
+import { Component, inject, signal, computed } from '@angular/core';
 import { FilmCard } from '../../components/film-card/film-card';
 import { Autofocus } from '../../directives/autofocus';
-import { FILMS } from '../../mocks/films.mock';
+import { FilmsService } from '../../services/films.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +10,14 @@ import { FILMS } from '../../mocks/films.mock';
   styleUrl: './home.css',
 })
 export class Home {
+  private readonly filmsService = inject(FilmsService);
+
   readonly query = signal('');
 
   readonly films = computed(() => {
     const q = this.query().toLowerCase().trim();
-    return q ? FILMS.filter(f => f.title.toLowerCase().includes(q)) : FILMS;
+    return q
+      ? this.filmsService.films().filter(f => f.title.toLowerCase().includes(q))
+      : this.filmsService.films();
   });
 }
