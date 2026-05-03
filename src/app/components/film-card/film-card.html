@@ -1,0 +1,12 @@
+<article class="card">
+  <img [src]="film().posterUrl" [alt]="film().title" class="poster" />
+  <div class="info">
+    <h3 class="title">{{ film().title }}</h3>
+    <div class="meta">
+      <span>{{ film().year }}</span>
+      <span class="dot">&middot;</span>
+      <span>{{ film().genre }}</span>
+    </div>
+    <div class="rating">&#9733; {{ film().rating }}</div>
+  </div>
+</article>

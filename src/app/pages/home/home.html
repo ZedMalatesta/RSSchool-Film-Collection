@@ -1,0 +1,5 @@
+<div class="catalog">
+  @for (film of films; track film.id) {
+    <app-film-card [film]="film" />
+  }
+</div>
