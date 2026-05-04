@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script>
+      const repo = '/RSSchool-Film-Collection';
+      const path = window.location.pathname.slice(repo.length) || '/';
+      const search = window.location.search;
+      const hash = window.location.hash;
+      window.location.replace(repo + '/?r=' + encodeURIComponent(path + search + hash));
+    </script>
+  </head>
+</html>

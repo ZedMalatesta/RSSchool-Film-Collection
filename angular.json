@@ -30,7 +30,10 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"]
+            "styles": [
+              "src/styles.css"
+            ],
+            "baseHref": "/RSSchool-Film-Collection/"
           },
           "configurations": {
             "production": {

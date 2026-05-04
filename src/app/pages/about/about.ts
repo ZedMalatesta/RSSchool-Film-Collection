@@ -3,7 +3,8 @@ import { BreadcrumbService } from '../../services/breadcrumb.service';
 
 @Component({
   selector: 'app-about',
-  template: '<p>About page</p>',
+  templateUrl: './about.html',
+  styleUrl: './about.css',
 })
 export class About {
   constructor() {
