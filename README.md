@@ -1,59 +1,63 @@
-# FilmCollection
+# Film Collection
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+A single-page Angular application for browsing a film catalog. Built as part of the RS School Angular course.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- Browse a catalog of films with poster, title, year, genre, and rating
+- Search films by title in real time
+- Add films to favorites
+- View full film details on a separate page
+- Breadcrumb navigation
+- 404 page for unknown routes
 
-```bash
-ng serve
-```
+## Tech Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Angular 21 (standalone components, signals)
+- TypeScript (strict mode)
+- CSS
 
-## Code scaffolding
+## How to Run
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Prerequisites
 
-```bash
-ng generate component component-name
-```
+- Node.js 18+
+- npm 9+
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Install dependencies
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Start the development server
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+Open [http://localhost:4200](http://localhost:4200) in your browser.
 
-For end-to-end (e2e) testing, run:
+### Build for production
 
 ```bash
-ng e2e
+npm run build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Project Structure
 
-## Additional Resources
+```text
+src/app/
+├── components/        # Shared UI components (film-card, breadcrumb)
+├── directives/        # Custom directives (autofocus)
+├── mocks/             # Static mock data
+├── models/            # TypeScript interfaces
+├── pages/             # Route-level page components
+├── pipes/             # Custom pipes (duration)
+├── resolvers/         # Route resolvers
+└── services/          # Application services (films)
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Author
+
+ZedMalatesta
