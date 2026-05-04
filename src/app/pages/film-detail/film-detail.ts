@@ -1,11 +1,12 @@
 import { Component, inject, input, computed, effect } from '@angular/core';
 import { FilmsService } from '../../services/films.service';
 import { BreadcrumbService } from '../../services/breadcrumb.service';
+import { RouterLink } from '@angular/router';
 import { DurationPipe } from '../../pipes/duration.pipe';
 
 @Component({
   selector: 'app-film-detail',
-  imports: [DurationPipe],
+  imports: [DurationPipe, RouterLink],
   templateUrl: './film-detail.html',
   styleUrl: './film-detail.css',
 })
