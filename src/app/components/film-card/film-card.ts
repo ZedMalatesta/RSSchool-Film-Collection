@@ -9,6 +9,6 @@ import { Film } from '../../models/film.model';
   styleUrl: './film-card.css',
 })
 export class FilmCard {
-  film = input.required<Film>();
-  toggleFavorite = output<number>();
+  readonly film = input.required<Film>();
+  readonly toggleFavorite = output<number>();
 }
