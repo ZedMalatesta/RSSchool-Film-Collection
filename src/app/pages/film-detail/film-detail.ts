@@ -1,8 +1,10 @@
 import { Component, inject, input, computed } from '@angular/core';
 import { FilmsService } from '../../services/films.service';
+import { DurationPipe } from '../../pipes/duration.pipe';
 
 @Component({
   selector: 'app-film-detail',
+  imports: [DurationPipe],
   templateUrl: './film-detail.html',
   styleUrl: './film-detail.css',
 })
