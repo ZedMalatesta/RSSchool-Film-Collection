@@ -16,9 +16,7 @@ export class FilmDetail {
 
   readonly id = input.required<string>();
 
-  readonly film = computed(() =>
-    this.filmsService.films().find(f => f.id === Number(this.id()))
-  );
+  readonly film = computed(() => this.filmsService.getById(Number(this.id())));
 
   constructor() {
     effect(() => {
