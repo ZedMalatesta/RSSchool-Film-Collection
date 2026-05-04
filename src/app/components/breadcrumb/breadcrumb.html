@@ -1,6 +1,6 @@
-@if (crumbs.length) {
+@if (breadcrumbService.crumbs().length) {
   <nav class="breadcrumbs">
-    @for (crumb of crumbs; track crumb.url; let last = $last) {
+    @for (crumb of breadcrumbService.crumbs(); track crumb.url; let last = $last) {
       @if (!last) {
         <a [routerLink]="crumb.url">{{ crumb.label }}</a>
         <span class="sep">&gt;</span>

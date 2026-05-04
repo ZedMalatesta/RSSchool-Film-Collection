@@ -2,6 +2,7 @@ import { Component, inject, signal, computed } from '@angular/core';
 import { FilmCard } from '../../components/film-card/film-card';
 import { Autofocus } from '../../directives/autofocus';
 import { FilmsService } from '../../services/films.service';
+import { BreadcrumbService } from '../../services/breadcrumb.service';
 
 @Component({
   selector: 'app-home',
@@ -20,4 +21,8 @@ export class Home {
       ? this.filmsService.films().filter(f => f.title.toLowerCase().includes(q))
       : this.filmsService.films();
   });
+
+  constructor() {
+    inject(BreadcrumbService).set([{ label: 'Home', url: '/' }]);
+  }
 }
